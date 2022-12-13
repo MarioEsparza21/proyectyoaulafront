@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>AdminProyectUFPS</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/cssMenu/main.css" />
+</head>
+
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<!-- Header -->
+				<header id="header">
+					<img src="">
+					<a href="index.html" class="logo"><strong>UFPS</strong> Sistema Proyectos de Aula</a>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a>
+						</li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+					</ul>
+				</header>
+				<!-- Form -->
+				<h2 style="color: black;">REGISTRAR MATERIA</h2>
+				<h3 style="color: black;">INFORMACIÓN DE LA MATERIA</h3>
+				<form method="post" action="#">
+					<div class="row gtr-uniform">
+						<div class="col-6 col-12-xsmall">
+							<input type="text" name="name" id="name" value="" placeholder="Nombre Materia" />
+						</div>
+						<div class="col-6 col-12-xsmall">
+							<input type="text" name="number" id="number" value="" placeholder="Codigo Materia" />
+						</div>
+						<div class="col-12">
+							<textarea name="message" id="message" placeholder="Descripción Materia" rows="6"></textarea>
+						</div>
+						<div class="col-6 col-12-xsmall">
+							<h3 style="color:black;">Listado de Estudiantes</h3>
+							<p>Sube un archivo excel:
+								<input type="file" name="archivosubido">
+								<input type="submit" value="Subir Archivo">
+							</p>
+						</div>
+						<div class="col-6 col-12-xsmall">
+							<div class="col-6 col-12-xsmall">
+								<h3 style="color:black;">Listado de Proyectos</h3>
+								<p>Sube un archivo excel:
+									<input type="file" name="archivosubido">
+									<input type="submit" value="Subir Archivo">
+								</p>
+							</div>
+						</div>
+
+						<!-- Table -->
+						<div class="table-wrapper">
+							<h3 style="color: black;">NUMERO DE FASES/AVANCES DE LOS PROYECTOS</h3>
+							<table>
+								<thead>
+									<tr>
+										<th>Fase</th>
+										<th>Fecha Inicio</th>
+										<th>Fecha Fin</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td><input type="date" id="start" name="trip-start" value="" min="" max=""></td>
+										<td><input type="date" id="start" name="trip-start" value="" min="" max=""></td>
+										<td><input type="button" onclick="insertarFila()" value="Insertar fila"></td>
+									</tr>
+								<tfoot>
+									<tr>
+										<td colspan="3"></td>
+										<td><input type="button" onclick="insertarFila()" value="Borrar fila"></td>
+									</tr>
+								</tfoot>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-12">
+							<ul class="actions">
+								<li><input type="submit" value="Registrar" class="primary" /></li>
+								<li><input type="reset" value="Refrescar" /></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<div>
+							<img style="width: 75%;" src="images/xd.png" alt="">
+						</div>
+
+						<h2>Nombre docente</h2>
+					</header>
+					<ul>
+						<li><a href="menuDocente.html">Lista Materias</a></li>
+						<li><a href="generic.html">Datos Personales</a></li>
+						<li><a href="elements.html">Elements</a></li>
+						<li><a href="index.html">Cerrar Sesión</a></li>
+					</ul>
+				</nav>
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">&copy; Universidad Francisco de Paula Santander <a
+							href="https://uvirtual.cloud.ufps.edu.co/">Uvirtual UFPS</a></p>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script src="assets/jsMenu/jquery.min.js"></script>
+	<script src="assets/jsMenu/browser.min.js"></script>
+	<script src="assets/jsMenu/breakpoints.min.js"></script>
+	<script src="assets/jsMenu/main.js"></script>
+</body>
+</html>
