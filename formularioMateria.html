@@ -37,13 +37,14 @@
 							<input type="text" name="number" id="number" value="" placeholder="Codigo Materia" />
 						</div>
 						<div class="col-12">
-							<textarea name="message" id="message" placeholder="Descripción Materia" rows="6"></textarea>
+							<textarea name="message" id="message" placeholder="Descripción Materia" rows="4"></textarea>
 						</div>
 						<div class="col-6 col-12-xsmall">
 							<h3 style="color:black;">Listado de Estudiantes</h3>
 							<p>Sube un archivo excel:
 								<input type="file" name="archivosubido">
 								<input type="submit" value="Subir Archivo">
+								&nbsp;&nbsp;<a href="archivo.jpg" download="Nombre-del-archivo"> Descargar Plantilla </a>
 							</p>
 						</div>
 						<div class="col-6 col-12-xsmall">
@@ -52,37 +53,27 @@
 								<p>Sube un archivo excel:
 									<input type="file" name="archivosubido">
 									<input type="submit" value="Subir Archivo">
+									&nbsp;&nbsp;<a href="archivo.jpg" download="Nombre-del-archivo"> Descargar Plantilla </a>
 								</p>
 							</div>
 						</div>
-
 						<!-- Table -->
 						<div class="table-wrapper">
 							<h3 style="color: black;">NUMERO DE FASES/AVANCES DE LOS PROYECTOS</h3>
-							<table>
-								<thead>
-									<tr>
-										<th>Fase</th>
-										<th>Fecha Inicio</th>
-										<th>Fecha Fin</th>
-										<th></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td><input type="date" id="start" name="trip-start" value="" min="" max=""></td>
-										<td><input type="date" id="start" name="trip-start" value="" min="" max=""></td>
-										<td><input type="button" onclick="insertarFila()" value="Insertar fila"></td>
-									</tr>
-								<tfoot>
-									<tr>
-										<td colspan="3"></td>
-										<td><input type="button" onclick="insertarFila()" value="Borrar fila"></td>
-									</tr>
-								</tfoot>
-								</tbody>
-							</table>
+							<table  id="tablaprueba">
+								<tr>
+									<th>Fecha Inicio</th>
+									<th>Fecha Fin</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+						<div class="form-group">
+							<button type="button" class="btn btn-primary mr-2" onclick="agregarFila()">Agregar
+								Fila</button>
+							<button type="button" class="btn btn-danger" onclick="eliminarFila()">Eliminar
+								Fila</button>
+						</div>
 						</div>
 						<div class="col-12">
 							<ul class="actions">
@@ -104,7 +95,7 @@
 							<img style="width: 75%;" src="images/xd.png" alt="">
 						</div>
 
-						<h2>Nombre docente</h2>
+						<h2>ing sistemas</h2>
 					</header>
 					<ul>
 						<li><a href="menuDocente.html">Lista Materias</a></li>
@@ -125,5 +116,20 @@
 	<script src="assets/jsMenu/browser.min.js"></script>
 	<script src="assets/jsMenu/breakpoints.min.js"></script>
 	<script src="assets/jsMenu/main.js"></script>
+	<script>
+        const agregarFila = () => {
+            document.getElementById('tablaprueba').insertRow(-1).innerHTML = '<td><input type="date" id="start" name="trip-start" value="" min="" max=""></td><td><input type="date" id="start" name="trip-start" value="" min="" max=""></td>'
+        }
+
+        const eliminarFila = () => {
+            const table = document.getElementById('tablaprueba')
+            const rowCount = table.rows.length
+
+            if (rowCount <= 1)
+                alert('No se puede eliminar el encabezado')
+            else
+                table.deleteRow(rowCount - 1)
+        }
+    </script>
 </body>
 </html>
