@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>AdminProyectUFPS</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/cssMenu/main.css" />
+</head>
+
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<!-- Header -->
+				<header id="header">
+					<img src="">
+					<a href="index.html" class="logo"><strong>UFPS</strong> Sistema Proyectos de Aula</a>
+					<ul class="icons">
+						<li><a href="https://uvirtual.cloud.ufps.edu.co/" class="icon brands fa-chrome"><span class="label">UvirtualUFPS</span></a></li>
+						<li><a href="https://www.facebook.com/Ufps.edu.co/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="https://t.me/UniMemesUFPS" class="icon brands fa-instagram"><span class="label">Telegram</span></a></li>
+						<li><a href="https://www.instagram.com/ufpscucuta/?hl=es" class="icon brands fa-telegram"><span class="label">Instagram</span></a></li>
+					</ul>
+				</header>
+				<!-- Form -->
+				<h2 style="color: black;">REGISTRAR PROYECTO EN MATERIA DE FORMA INDIVIDUAL</h2>
+				<h3 style="color: black;">INFORMACIÓN DEL PROYECTO</h3>
+				<form method="post" action="#">
+					<div class="row gtr-uniform">
+						<div class="col-6 col-12-xsmall">
+							<input type="text" name="name" id="name" value="" placeholder="Nombre proyecto" />
+						</div>
+						<div class="col-6 col-12-xsmall">
+							<input type="text" name="number" id="number" value="" placeholder="Cantidad Integrantes" />
+						</div>
+						<div class="col-12">
+							<textarea name="message" id="message" placeholder="Descripción Proyecto" rows="4"></textarea>
+						</div>
+
+						<div class="col-12">
+							<ul class="actions">
+								<li><input type="submit" value="Registrar" class="primary" /></li>
+								<li><a href="ProyectosMateria.html" class="button big wide smooth-scroll-middle">Regresar</a>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<div>
+							<img style="width: 75%;" src="images/xd.png" alt="">
+						</div>
+
+						<h2>ing sistemas</h2>
+					</header>
+					<ul>
+						<li><a href="menuDocente.html">Lista Materias</a></li>
+						<li><a href="Actualizardatos.html">Datos Personales</a></li>
+						<li><a href="index.html">Cerrar Sesión</a></li>
+					</ul>
+				</nav>
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">&copy; Universidad Francisco de Paula Santander <a
+							href="https://uvirtual.cloud.ufps.edu.co/">Uvirtual UFPS</a></p>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script src="assets/jsMenu/jquery.min.js"></script>
+	<script src="assets/jsMenu/browser.min.js"></script>
+	<script src="assets/jsMenu/breakpoints.min.js"></script>
+	<script src="assets/jsMenu/main.js"></script>
+	<script>
+        const agregarFila = () => {
+            document.getElementById('tablaprueba').insertRow(-1).innerHTML = '<td><input type="date" id="start" name="trip-start" value="" min="" max=""></td><td><input type="date" id="start" name="trip-start" value="" min="" max=""></td>'
+        }
+
+        const eliminarFila = () => {
+            const table = document.getElementById('tablaprueba')
+            const rowCount = table.rows.length
+
+            if (rowCount <= 1)
+                alert('No se puede eliminar el encabezado')
+            else
+                table.deleteRow(rowCount - 1)
+        }
+    </script>
+</body>
+</html>
